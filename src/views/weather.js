@@ -1,5 +1,13 @@
+import { Grid, Typography } from "@material-ui/core"
+
 export default function Weather() {
     return (
-        <h1>Weather Page</h1>
+        <div>
+            <Grid container>
+                <Typography variant="h3">
+                    Weather Page
+                </Typography>
+            </Grid>
+        </div>
     )
 }

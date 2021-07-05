@@ -1,5 +1,13 @@
+import { Grid, Typography } from "@material-ui/core"
+
 export default function CitySelect() {
     return (
-        <h1>City Selector Page</h1>
+        <div>
+            <Grid container>
+                <Typography variant="h3">
+                    City Select Page
+                </Typography>
+            </Grid>
+        </div>
     )
 }
