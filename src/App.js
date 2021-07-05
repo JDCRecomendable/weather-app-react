@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { createMuiTheme } from '@material-ui/core';
+import { createMuiTheme, Grid, Typography } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import CitySelect from './views/citySelect';
 import Weather from './views/weather';
@@ -15,12 +15,21 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <BrowserRouter>
-          <Route exact path="/" component={CitySelect}></Route>
-          <Route exact path="/weather" component={Weather}></Route>
-        </BrowserRouter>
-      </div>
+      <Grid container justify="center">
+        <Grid container className="appTitle" md={8} lg={6} justify="center">
+          <Typography variant="h3" align="center">
+            Weather App
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid container justify="center">
+        <Grid container className="subActivity" md={8} lg={6} justify="center">
+          <BrowserRouter>
+            <Route exact path="/" component={CitySelect}></Route>
+            <Route exact path="/weather" component={Weather}></Route>
+          </BrowserRouter>
+        </Grid>
+      </Grid>
     </ThemeProvider>
     // <div className="App">
     //   <header className="App-header">

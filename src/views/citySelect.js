@@ -1,13 +1,16 @@
-import { Grid, Typography } from "@material-ui/core"
+import { Grid, Button } from "@material-ui/core"
+import "./citySelect.css"
+import CitySelector from "../components/CitySelector";
 
 export default function CitySelect() {
     return (
-        <div>
-            <Grid container>
-                <Typography variant="h3">
-                    City Select Page
-                </Typography>
+        <Grid container justify="center" align="center" alignItems="center">
+            <Grid item xs>
+                <CitySelector />
             </Grid>
-        </div>
+            <Grid item xs>
+                <Button variant="contained">Proceed</Button>
+            </Grid>
+        </Grid>
     )
 }
