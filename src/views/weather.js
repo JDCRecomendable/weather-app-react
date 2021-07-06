@@ -1,13 +1,59 @@
-import { Grid, Typography } from "@material-ui/core"
+import { Container, Grid, Typography } from "@material-ui/core"
+import "./weather.css"
+import WeatherCard from "../components/WeatherCard.js"
 
 export default function Weather() {
+    const city = "Auckland"
+    const months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ]
+    const dateObject = new Date()
+    const year = dateObject.getFullYear()
+    const month = months[dateObject.getMonth()]
+    const date = dateObject.getDate()
+    
     return (
-        <div>
-            <Grid container>
-                <Typography variant="h3">
-                    Weather Page
-                </Typography>
+        <Container className="root">
+            <Typography variant="h4">
+                Weather in {city}
+            </Typography>
+            <Typography variant="h6">
+                Extracted from Weather API | {date} {month} {year}
+            </Typography>
+            <Grid container justify="center" spacing={3}>
+                <Grid item>
+                    <WeatherCard />
+                </Grid>
+                <Grid item>
+                    <WeatherCard />
+                </Grid>
+                <Grid item>
+                    <WeatherCard />
+                </Grid>
+                <Grid item>
+                    <WeatherCard />
+                </Grid>
+                <Grid item>
+                    <WeatherCard />
+                </Grid>
+                <Grid item>
+                    <WeatherCard />
+                </Grid>
+                <Grid item>
+                    <WeatherCard />
+                </Grid>
             </Grid>
-        </div>
+        </Container>
     )
 }

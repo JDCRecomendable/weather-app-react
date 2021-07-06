@@ -1,0 +1,14 @@
+.card {
+    background-color: #EEE;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.dayText, .dateText {
+    font-size: 1.2em;
+}
+
+.weatherText {
+    font-weight: bold;
+    font-size: 1.6em;
+}
