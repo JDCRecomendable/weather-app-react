@@ -1,5 +1,5 @@
 import { Grid, Button } from "@material-ui/core"
-import "./citySelect.css"
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import CitySelector from "../components/CitySelector";
 
 export default function CitySelect() {
@@ -9,7 +9,7 @@ export default function CitySelect() {
                 <CitySelector />
             </Grid>
             <Grid item xs>
-                <Button variant="contained">Proceed</Button>
+                <Button variant="contained"><ArrowForwardIosIcon /></Button>
             </Grid>
         </Grid>
     )

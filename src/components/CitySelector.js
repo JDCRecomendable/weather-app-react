@@ -1,36 +1,24 @@
 import React from "react";
-import { FormControl, InputLabel, Select } from "@material-ui/core";
+import { FormControl, InputLabel, Select, MenuItem } from "@material-ui/core";
 
 export default function CitySelector() {
-    const [state, setState] = React.useState({
-        city: "",
-        name: "",
-    });
+    const [city, setCity] = React.useState('');
 
     const handleChange = (event) => {
-        const name = event.target.name;
-        setState({
-            ...state,
-            [name]: event.target.value,
-        });
+        setCity(event.target.value);
     };
 
     return (
         <FormControl variant="outlined">
-            <InputLabel>Select City...</InputLabel>
+            <InputLabel>Select a City...</InputLabel>
             <Select
-                native
-                value={state.city}
-                label="City"
+                value={city}
                 onChange={handleChange}
-                inputProps={{
-                    name: 'city',
-                }}
+                style={{ minWidth: "160px" }}
             >
-                <option value="" />
-                <option value="akl">Auckland</option>
-                <option value="mel">Melbourne</option>
-                <option value="syd">Syndey</option>
+                <MenuItem value="akl">Auckland</MenuItem>
+                <MenuItem value="mel">Melbourne</MenuItem>
+                <MenuItem value="syd">Syndey</MenuItem>
             </Select>
         </FormControl>
     );
