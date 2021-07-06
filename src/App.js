@@ -4,11 +4,11 @@ import { createMuiTheme, Grid, Typography } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import CitySelect from './views/citySelect';
 import Weather from './views/weather';
-import { grey } from '@material-ui/core/colors';
+import { blueGrey } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
   palette: {
-    primary: grey,
+    primary: blueGrey,
   },
 })
 
