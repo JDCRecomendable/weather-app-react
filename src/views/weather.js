@@ -1,6 +1,7 @@
-import { Container, Grid, Typography, ButtonGroup, Button } from "@material-ui/core"
+import { Container, Grid, Typography } from "@material-ui/core"
 import "./weather.css"
 import WeatherCard from "../components/WeatherCard.js"
+import NoOfDaySelector from "../components/NoOfDaySelector"
 
 export default function Weather() {
     const city = "Auckland"
@@ -31,11 +32,7 @@ export default function Weather() {
             <Typography variant="h6">
                 Extracted from Weather API | {date} {month} {year}
             </Typography>
-            <ButtonGroup className="noOfDaySelector" color="primary">
-                <Button>3 Days</Button>
-                <Button>5 Days</Button>
-                <Button>7 Days</Button>
-            </ButtonGroup>
+            <NoOfDaySelector />
             <Grid container justify="center" spacing={3}>
                 <Grid item>
                     <WeatherCard />
